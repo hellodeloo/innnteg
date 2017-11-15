@@ -1,0 +1,43 @@
+.h-browserhappy {
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 6px 0 rgba($gray-500, 0.30);
+}
+
+.h-stickywrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.h-sidebarscroller {
+  overflow-x: auto;
+
+  @include media-breakpoint-up(md) {
+    overflow-x: inherit;
+  }
+}
+
+[data-btn],
+[data-smoothscroll] {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+[data-btn] {
+  font-weight: 300;
+}
+
+[data-toggle="lightbox"] {
+  cursor: default;
+
+  @include media-breakpoint-up(sm) {
+    cursor: pointer;
+  }
+}
