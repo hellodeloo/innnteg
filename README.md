@@ -1,7 +1,7 @@
 Innnteg
 ====================
 
-**Innnteg** est un starter-kit qui aide à l'intégration HTML.
+**Innnteg** est un starter-kit qui aide à l'intégration de pages HTML.
 
 Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, **[Sass](http://sass-lang.com/)**, **[Twig](https://twig.symfony.com/)** et **[Bootstrap 4](https://getbootstrap.com/)**.
 
@@ -21,4 +21,4 @@ npm install
 
 
 ## Utilisation
-Soon
+**Démarrer** le serveur avec `gulp serve`
