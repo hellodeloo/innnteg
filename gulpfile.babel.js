@@ -141,7 +141,7 @@ function watch() {
 }
 
 
-const dev = gulp.series(html, scripts, styles, images, vendors, serve, watch);
+const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
 gulp.task('serve', dev);
 
 export default dev;
