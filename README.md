@@ -21,4 +21,4 @@ npm install
 
 
 ## Utilisation
-**Démarrer** le serveur avec `gulp serve`
+**Démarrer** le serveur avec `gulp dev`

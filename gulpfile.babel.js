@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
-import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
@@ -16,15 +15,17 @@ import twig from 'gulp-twig';
 const server = browserSync.create();
 
 const paths = {
-  appDir: './',
-  devImages: 'images/rawimages/*.{jpg,jpeg,png,svg}',
-  appImages: 'images/',
-  devVendors: ['javascripts/vendor/jquery/jquery.min.js', 'javascripts/vendor/bootstrap/popper.min.js', 'javascripts/vendor/bootstrap/bootstrap.min.js'],
-  devScripts: 'javascripts/app.js',
-  appScripts: 'javascripts/',
-  devStyles: 'stylesheets/scss/**/*.scss',
-  appStyles: 'stylesheets/css/',
-  devHtml: 'templates/**/*.twig',
+  distDir: './dist/',
+  srcImages: 'src/images/*.{jpg,jpeg,png,svg}',
+  distImages: 'dist/images/',
+  srcVendors: ['node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'],
+  distVendors: 'dist/javascripts/',
+  srcScripts: 'src/javascripts/main.js',
+  distScripts: 'dist/javascripts/',
+  srcStyles: 'src/stylesheets/**/*.scss',
+  distStyles: 'dist/stylesheets/css/',
+  srcHtml: 'src/**/*.twig',
+  distHtml: 'dist/'
 };
 
 const onError = (err) => {
@@ -36,11 +37,9 @@ const onError = (err) => {
   this.emit('end');
 };
 
-
-
 // Styles Task
 export function styles() {
-  return gulp.src(paths.devStyles)
+  return gulp.src(paths.srcStyles)
     .pipe(plumber({
       errorHandler: onError
     }))
@@ -52,40 +51,37 @@ export function styles() {
     }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.appStyles));
+    .pipe(gulp.dest(paths.distStyles));
 }
-
 
 // Javascript Task
 export function scripts() {
-  return gulp.src(paths.devScripts, {
-      sourcemaps: true
-    })
+  return gulp.src(paths.srcScripts, {
+    sourcemaps: true
+  })
     .pipe(plumber({
       errorHandler: onError
     }))
     .pipe(babel())
     .pipe(uglify())
-    .pipe(concat('app.min.js'))
-    .pipe(gulp.dest(paths.appScripts));
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(paths.distScripts));
 }
 
 export function vendors() {
-  return gulp.src(paths.devVendors)
+  return gulp.src(paths.srcVendors)
     .pipe(plumber({
       errorHandler: onError
     }))
-    .pipe(uglify())
-    .pipe(concat('vendor.min.js'))
-    .pipe(gulp.dest(paths.appScripts));
+    .pipe(concat('vendors.js'))
+    .pipe(gulp.dest(paths.distVendors));
 }
-
 
 // Compress Images Task
 export function images() {
-  return gulp.src(paths.devImages, {
-      since: gulp.lastRun(images)
-    })
+  return gulp.src(paths.srcImages, {
+    since: gulp.lastRun(images)
+  })
     .pipe(plumber({
       errorHandler: onError
     }))
@@ -97,20 +93,18 @@ export function images() {
         removeViewBox: false
       }]
     }))
-    .pipe(gulp.dest(paths.appImages));
+    .pipe(gulp.dest(paths.distImages));
 }
-
 
 // Templates to HTML Task
 export function html() {
-  return gulp.src(paths.devHtml)
+  return gulp.src(paths.srcHtml)
     .pipe(plumber({
       errorHandler: onError
     }))
     .pipe(twig())
-    .pipe(gulp.dest(paths.appDir));
+    .pipe(gulp.dest(paths.distHtml));
 }
-
 
 // BrowserSync Reload Task
 function reload(done) {
@@ -118,12 +112,11 @@ function reload(done) {
   done();
 }
 
-
 // BrowserSync Serve Task
 function serve(done) {
   server.init({
     server: {
-      baseDir: paths.appDir
+      baseDir: paths.distDir
     },
     open: false,
     notify: false
@@ -131,17 +124,15 @@ function serve(done) {
   done();
 }
 
-
 // Watch Task
 function watch() {
-  gulp.watch(paths.devHtml, gulp.series(html, reload));
-  gulp.watch(paths.devScripts, gulp.series(scripts, reload));
-  gulp.watch(paths.devStyles, gulp.series(styles, reload));
-  gulp.watch(paths.devImages, gulp.series(images, reload));
+  gulp.watch(paths.srcHtml, gulp.series(html, reload));
+  gulp.watch(paths.srcScripts, gulp.series(scripts, reload));
+  gulp.watch(paths.srcStyles, gulp.series(styles, reload));
+  gulp.watch(paths.srcImages, gulp.series(images, reload));
 }
 
-
 const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
-gulp.task('serve', dev);
+gulp.task('dev', dev);
 
 export default dev;
