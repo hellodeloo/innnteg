@@ -1,0 +1,102 @@
+// Options
+$enable-rounded: false;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1140px
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1080px
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: ($spacer * 1.5),
+  4: ($spacer * 2),
+  5: ($spacer * 3)
+);
+
+// Grid columns
+$grid-gutter-width: 20px;
+
+// Fonts
+@font-face {
+font-family: 'Circular Book';
+font-style: normal;
+font-weight: normal;
+src: local('Circular Book'), url('../fonts/circular/lineto-circular-pro-book.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Circular Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Circular Bold'), url('../fonts/circular/lineto-circular-pro-bold.woff') format('woff');
+}
+
+
+$font-family-sans-serif: "Circular Book", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-light;
+$line-height-base: 1.6;
+
+$font-size-base: 1rem !default;
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * .813);
+$h6-font-size: $font-size-base * 1.125;
+
+
+// Color system
+$white: #ffffff;
+$black: #000000;
+$gray-100: #f1f2f2;
+$gray-200: #e9e9ef;
+$gray-500: #939598;
+$gray-700: #b7b9bc;
+$gray-800: #000000;
+$gray-900: #000000;
+$body-bg: $gray-100;
+
+$primary: #29235e;
+$secondary: #ff3053;
+
+// Links
+$link-color: $black;
+
+// Navbar
+$navbar-dark-color:$white;
+$navbar-dark-hover-color: $secondary;
+$navbar-dark-active-color: $secondary;
+$navbar-dark-disabled-color: $gray-500;
+$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-dark-toggler-border-color: transparent;
+$navbar-padding-x: 0;
+$navbar-padding-y: ($spacer / 4);
+
+
+// Dropdowns
+$dropdown-min-width: 15rem;
+$dropdown-padding-y: 0;
+$dropdown-border-color: transparent;
+$dropdown-link-color: $black;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $secondary;
+$dropdown-item-padding-y: .70rem;
+$dropdown-item-padding-x: 1rem;

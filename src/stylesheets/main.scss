@@ -1,15 +1,13 @@
-// Main Innnteg SASS file
-/* ----------------------------- */
-/* Bootstrap Overrides           */
-/* ----------------------------- */
-@import "node_modules/bootstrap/scss/bootstrap.scss";
-// Copy variables from `_variables.scss` to this file to override default values
-// without modifying source files.
-
+// Main  SASS file
 
 /* ----------------------------- */
 /* Main Stylesheets               */
 /* ----------------------------- */
+// Framework
+@import "framework/vars";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "framework/custom";
+
 // Helpers
 @import "helpers/vars";
 @import "helpers/mixins";
@@ -18,13 +16,17 @@
 
 // Components
 @import "components/common";
+@import "components/navbar";
 @import "components/header";
 @import "components/footer";
 @import "components/main";
 
 // Layout
-@import "layouts/main";
-
-// Page
+@import "layouts/hp";
+@import "layouts/page";
 
 // Vendors
+@import "vendors/fontawesome/fa-solid";
+@import "vendors/fontawesome/fa-regular";
+@import "vendors/fontawesome/fa-brands";
+@import "vendors/fontawesome/fontawesome";

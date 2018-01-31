@@ -1,3 +1,41 @@
 .c-header {
- //
+  background-color: $white;
+  @extend .pt-3;
+  @extend .pb-3;
+
+  a,
+  a:focus,
+  a:hover,
+  a:link {
+    text-decoration: none;
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__col {
+    &--logo {
+      text-align: left;
+    }
+
+    &--nav {
+      text-align: right;
+
+      .list-inline-item {
+        @extend .pl-2;
+
+        i {
+          @extend .pl-1;
+        }
+
+        span {
+          display: none;
+          @include media-breakpoint-up(lg) {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
 }

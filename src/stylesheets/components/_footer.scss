@@ -1,3 +1,70 @@
 .c-footer {
-  //
+  background-color: $primary;
+  color: $white;
+  font-size: $font-size-sm;
+  @extend .pt-4;
+  @extend .pb-4;
+
+  a,
+  a:focus,
+  a:hover,
+  a:link {
+    color: $white;
+  }
+
+  &__col {
+    h6 {
+      color: $gray-500;
+
+      a,
+      a:focus,
+      a:hover,
+      a:link {
+        color: $secondary;
+      }
+    }
+
+    &--nav {
+      text-align: center;
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+      }
+    }
+
+    &--address {
+      text-align: center;
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+      }
+    }
+
+    &--social {
+      text-align: center;
+
+      a,
+      a:focus,
+      a:hover,
+      a:link {
+        text-decoration: none;
+        color: $white;
+      }
+
+      i {
+        width: 45px;
+        height: 45px;
+        border-radius: 4px;
+        background-color: $secondary;
+        text-align: center;
+        float: left;
+
+        &::before {
+          display: inline-block;
+          padding-top: 9px;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        text-align: right;
+      }
+    }
+  }
 }
