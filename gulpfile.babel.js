@@ -23,12 +23,12 @@ const paths = {
   srcScripts: 'src/javascripts/main.js',
   distScripts: 'dist/javascripts/',
   srcStyles: 'src/stylesheets/**/*.scss',
-  distStyles: 'dist/stylesheets/css/',
-  srcHtml: 'src/**/*.twig',
+  distStyles: 'dist/stylesheets/',
+  srcHtml: 'src/*.twig',
   distHtml: 'dist/'
 };
 
-const onError = (err) => {
+let onError = (err) => {
   notify.onError({
     title: 'Innnteg',
     subtitle: 'Error!',
