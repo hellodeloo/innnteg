@@ -1,18 +1,18 @@
 {
-  "name": "innnteg",
+  "name": "bipsoin",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "git+https://github.com/hellodeloo/innnteg.git",
+  "repository": "git+https://github.com/hellodeloo/bipsoin-html.git",
   "author": "David Dello <hello@hellodeloo.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hellodeloo/innnteg/issues"
+    "url": "https://github.com/hellodeloo/bipsoin-html/issues"
   },
-  "homepage": "https://github.com/hellodeloo/innnteg#readme",
+  "homepage": "https://github.com/hellodeloo/bipsoin-html#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
