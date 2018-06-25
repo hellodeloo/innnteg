@@ -1,16 +1,1 @@
-'use strict';
-
-// Initialisation
-$(window).on('load', function () {
-  console.log('load');
-});
-
-// Re-initialisation au resize
-$(window).on('resize orientationchange', function () {
-  console.log('resize');
-});
-
-// Re-initialisation au scroll
-$(window).on('scroll', function () {
-  console.log('scroll');
-});
+"use strict";$(window).on("load",function(){console.log("load")}),$(window).on("resize orientationchange",function(){console.log("resize")}),$(window).on("scroll",function(){console.log("scroll")});

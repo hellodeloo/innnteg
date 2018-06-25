@@ -1,20 +1,19 @@
-Innnteg
+Bipsoin HTML
 ====================
 
-**Innnteg** est un starter-kit qui aide à l'intégration de pages HTML.
-
-Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, **[Sass](http://sass-lang.com/)**, **[Twig](https://twig.symfony.com/)** et **[Bootstrap 4](https://getbootstrap.com/)**.
+Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, **[Sass](http://sass-lang.com/)**, **[Twig](https://twig.symfony.com/)**, **[Bootstrap 4](https://getbootstrap.com/)** et Node >= 8.11.1.
 
 
 
 ## Installation
 
 ```
-git clone git@github.com:hellodeloo/innnteg.git
+git clone git@github.com:hellodeloo/bipsoin-html.git
+
 ```
 
 ```
-cd innnteg
+cd html
 npm install
 ```
 
@@ -22,3 +21,7 @@ npm install
 
 ## Utilisation
 **Démarrer** le serveur avec `gulp dev`
+
+
+## Html
+Html visible en [ici](http://www.hellodeloo.com/prestations/bipsoin/)
