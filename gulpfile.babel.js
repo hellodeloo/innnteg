@@ -24,11 +24,11 @@ const paths = {
   distScripts: 'dist/javascripts/',
   srcStyles: 'src/stylesheets/**/*.scss',
   distStyles: 'dist/stylesheets/',
-  srcHtml: 'src/*.twig',
+  srcHtml: 'src/**/*.twig',
   distHtml: 'dist/'
 };
 
-let onError = (err) => {
+let notifyOnError = function(err) {
   notify.onError({
     title: 'Innnteg',
     subtitle: 'Error!',
@@ -41,7 +41,7 @@ let onError = (err) => {
 export function styles() {
   return gulp.src(paths.srcStyles)
     .pipe(plumber({
-      errorHandler: onError
+      errorHandler: notifyOnError
     }))
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -60,7 +60,7 @@ export function scripts() {
     sourcemaps: true
   })
     .pipe(plumber({
-      errorHandler: onError
+      errorHandler: notifyOnError
     }))
     .pipe(babel())
     .pipe(uglify())
@@ -71,7 +71,7 @@ export function scripts() {
 export function vendors() {
   return gulp.src(paths.srcVendors)
     .pipe(plumber({
-      errorHandler: onError
+      errorHandler: notifyOnError
     }))
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest(paths.distVendors));
@@ -83,7 +83,7 @@ export function images() {
     since: gulp.lastRun(images)
   })
     .pipe(plumber({
-      errorHandler: onError
+      errorHandler: notifyOnError
     }))
     .pipe(imagemin({
       optimizationLevel: 3,
@@ -100,7 +100,7 @@ export function images() {
 export function html() {
   return gulp.src(paths.srcHtml)
     .pipe(plumber({
-      errorHandler: onError
+      errorHandler: notifyOnError
     }))
     .pipe(twig())
     .pipe(gulp.dest(paths.distHtml));
@@ -119,7 +119,9 @@ function serve(done) {
       baseDir: paths.distDir
     },
     open: false,
-    notify: false
+    notify: false,
+    injectChanges: true,
+    reloadDebounce: 1000
   });
   done();
 }
