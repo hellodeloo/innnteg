@@ -20,8 +20,4 @@ npm install
 
 
 ## Utilisation
-**Démarrer** le serveur avec `gulp dev`
-
-
-## Html
-Html visible en [ici](http://www.hellodeloo.com/prestations/bipsoin/)
+**Démarrer** le serveur avec `yarn dev`

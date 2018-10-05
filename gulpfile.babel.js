@@ -24,7 +24,7 @@ const paths = {
   distScripts: 'dist/javascripts/',
   srcStyles: 'src/stylesheets/**/*.scss',
   distStyles: 'dist/stylesheets/',
-  srcHtml: 'src/**/*.twig',
+  srcHtml: 'src/*.twig',
   distHtml: 'dist/'
 };
 
