@@ -1,0 +1,1 @@
+"use strict";$(window).on("load",function(){console.log("load")}),$(window).on("resize orientationchange",function(){console.log("resize")}),$(window).on("scroll",function(){console.log("scroll")});
