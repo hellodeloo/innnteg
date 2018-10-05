@@ -137,4 +137,7 @@ function watch() {
 const dev = gulp.series(html, vendors, scripts, styles, images, serve, watch);
 gulp.task('dev', dev);
 
+const build = gulp.series(html, vendors, scripts, styles, images);
+gulp.task('build', build);
+
 export default dev;

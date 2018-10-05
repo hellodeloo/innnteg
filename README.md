@@ -1,4 +1,4 @@
-Bipsoin HTML
+Innnteg HTML
 ====================
 
 Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, **[Sass](http://sass-lang.com/)**, **[Twig](https://twig.symfony.com/)**, **[Bootstrap 4](https://getbootstrap.com/)** et Node >= 8.11.1.
@@ -8,7 +8,7 @@ Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, *
 ## Installation
 
 ```
-git clone git@github.com:hellodeloo/bipsoin-html.git
+git clone git@github.com:hellodeloo/innnteg-html.git
 
 ```
 
@@ -21,3 +21,7 @@ npm install
 
 ## Utilisation
 **Démarrer** le serveur avec `yarn dev`
+
+
+## Déploiement
+**Déployer** sur github pages avec `deploy.sh`

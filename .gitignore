@@ -1,0 +1,11 @@
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+ftp-config.json
+node_modules/
+.sass-cache/
+.idea
