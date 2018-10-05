@@ -19,7 +19,7 @@ yarn install
 
 
 ## Utilisation
-**Démarrer** le serveur avec `yarn dev`
+**Démarrer** le serveur avec `gulp dev`
 
 
 ## Déploiement
