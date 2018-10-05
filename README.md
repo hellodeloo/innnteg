@@ -8,7 +8,7 @@ Il utilise **[Gulp 4](http://gulpjs.com/)**, **[Babel](https://babeljs.io/)**, *
 ## Installation
 
 ```
-git clone git@github.com:hellodeloo/innnteg-html.git
+git clone --depth 1 git@github.com:hellodeloo/innnteg-html.git
 
 ```
 
