@@ -14,7 +14,7 @@ git clone git@github.com:hellodeloo/innnteg-html.git
 
 ```
 cd html
-npm install
+yarn install
 ```
 
 
@@ -24,4 +24,4 @@ npm install
 
 
 ## Déploiement
-**Déployer** sur github pages avec `deploy.sh`
+**Déployer** sur [github pages](https://hellodeloo.github.io/innnteg/) avec `deploy.sh`
