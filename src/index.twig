@@ -1,40 +1,58 @@
 {% extends "templates/layouts/layout.twig" %}
 
 {% block title %}
-  HTML {{ parent() }}
+  {{ parent() }} - index
 {% endblock %}
 
 {% block main %}
-  <main class="main__container container" role="main">
-    <div class="jumbotron">
-       <h1 class="display-3">Jumbotron heading</h1>
-       <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-       <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-     </div>
+  <main class="c-main" role="main">
 
-     <div class="row">
-       <div class="col-lg-6">
-         <h4>Subheading</h4>
-         <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    {% embed "templates/partials/hero.twig" %}{% endembed %}
 
-         <h4>Subheading</h4>
-         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+    <section class="c-pourquoi">
+      <div class="c-pourquoi__container container">
+        <div class="c-pourquoi__row row">
+          <p class="col-12">
+            c-pourquoi
+            <i class="fas fa-address-book"></i>
+          </p>
+        </div>
+      </div>
+    </section>
 
-         <h4>Subheading</h4>
-         <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-       </div>
+    <section class="c-infos">
+      <div class="c-infos__container container">
+        <div class="c-infos__row row">
+          <p class="col-12">
+            c-infos
+          </p>
+        </div>
+      </div>
+    </section>
 
-       <div class="col-lg-6">
-         <h4>Subheading</h4>
-         <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    <section class="c-comment">
+      <div class="c-comment__container container">
+        <div class="c-comment__row row">
+          <p class="col-12">
+            c-comment
+          </p>
+        </div>
+      </div>
+    </section>
 
-         <h4>Subheading</h4>
-         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+    <section class="c-qui">
+      <div class="c-qui__container container">
+        <div class="c-qui__row row">
+          <p class="col-12">
+            c-qui
+          </p>
+        </div>
+      </div>
+    </section>
 
-         <h4>Subheading</h4>
-         <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-       </div>
-     </div>
+    {% embed "templates/partials/contact.twig" %}{% endembed %}
+
   </main>
-
 {% endblock %}
+
+{% block modal %}{% endblock %}

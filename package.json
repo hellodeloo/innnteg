@@ -4,10 +4,13 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "sh deploy.sh",
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "push": "git add . && git commit -m 'update' && git push origin master"
   },
   "repository": "git+https://github.com/hellodeloo/innnteg.git",
-  "author": "David Dello <hello@hellodeloo.com>",
+  "author": "David Deloo <hello@hellodeloo.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hellodeloo/innnteg/issues"

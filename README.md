@@ -19,8 +19,8 @@ yarn install
 
 
 ## Utilisation
-**Démarrer** le serveur avec `gulp dev`
+**Démarrer** le serveur avec `yarn dev`
 
 
 ## Déploiement
-**Déployer** sur [github pages](https://hellodeloo.github.io/innnteg/) avec `deploy.sh`
+**Déployer** sur [github pages](https://hellodeloo.github.io/innnteg/) avec `yarn deploy`

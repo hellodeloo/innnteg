@@ -3,7 +3,7 @@
   <head>
     <title>
       {% block title %}
-        Innnteg
+        Secafi
       {% endblock %}
     </title>
     <meta charset="utf-8">
@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="stylesheets/main.css">
   </head>
   <body>
+
     {% include "../partials/browserhappy.twig" %}
     {% include "../partials/header.twig" %}
 
     {% block main %}{% endblock %}
 
     {% include "../partials/footer.twig" %}
+
+    {% block modal %}{% endblock %}
 
     <script src="javascripts/vendors.js"></script>
     <script src="javascripts/main.js"></script>

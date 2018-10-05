@@ -4,6 +4,7 @@
 /* Main Stylesheets               */
 /* ----------------------------- */
 // Framework
+@import "node_modules/bootstrap/scss/functions.scss";
 @import "framework/variables";
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "framework/custom";
@@ -16,17 +17,18 @@
 
 // Components
 @import "components/common";
-@import "components/navbar";
 @import "components/header";
 @import "components/footer";
 @import "components/main";
 
 // Layout
-@import "layouts/hp";
 @import "layouts/page";
 
 // Vendors
-@import "vendors/fontawesome/fa-solid";
-@import "vendors/fontawesome/fa-regular";
 @import "vendors/fontawesome/fa-brands";
+@import "vendors/fontawesome/fa-light";
+@import "vendors/fontawesome/fa-regular";
+@import "vendors/fontawesome/fa-solid";
 @import "vendors/fontawesome/fontawesome";
+
+// IE11 Hacks
