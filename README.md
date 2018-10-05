@@ -13,7 +13,6 @@ git clone --depth 1 git@github.com:hellodeloo/innnteg-html.git
 ```
 
 ```
-cd html
 yarn install
 ```
 
