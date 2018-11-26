@@ -1,58 +1,21 @@
 {% extends "templates/layouts/layout.twig" %}
 
 {% block title %}
-  {{ parent() }} - index
+  HTML {{ parent() }}
 {% endblock %}
 
 {% block main %}
   <main class="c-main" role="main">
 
-    {% embed "templates/partials/hero.twig" %}{% endembed %}
+    <section class="c-main__container container">
 
-    <section class="c-pourquoi">
-      <div class="c-pourquoi__container container">
-        <div class="c-pourquoi__row row">
-          <p class="col-12">
-            c-pourquoi
-            <i class="fas fa-address-book"></i>
-          </p>
+        <div class="c-main__row row">
+          <div class="c-main__col col">
+            c-main
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="c-infos">
-      <div class="c-infos__container container">
-        <div class="c-infos__row row">
-          <p class="col-12">
-            c-infos
-          </p>
-        </div>
-      </div>
     </section>
-
-    <section class="c-comment">
-      <div class="c-comment__container container">
-        <div class="c-comment__row row">
-          <p class="col-12">
-            c-comment
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="c-qui">
-      <div class="c-qui__container container">
-        <div class="c-qui__row row">
-          <p class="col-12">
-            c-qui
-          </p>
-        </div>
-      </div>
-    </section>
-
-    {% embed "templates/partials/contact.twig" %}{% endembed %}
 
   </main>
 {% endblock %}
-
-{% block modal %}{% endblock %}

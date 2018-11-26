@@ -1,3 +1,4 @@
+# Folder & file view configuration
 .DS_Store
 Desktop.ini
 ._*
@@ -5,7 +6,15 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Config
+.gitignore
 ftp-config.json
-node_modules/
+deploy.sh
+
+# Dev & IDE
 .sass-cache/
 .idea
+node_modules
+.vscode
+
+# App
